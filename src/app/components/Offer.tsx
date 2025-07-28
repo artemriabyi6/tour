@@ -4,7 +4,7 @@ import styles from './offer.module.scss';
 import Image from 'next/image';
 import type { FC } from 'react';
 import { motion, useInView } from 'framer-motion';
-import { useRef, useState } from 'react';
+import { useRef } from 'react';
 
 type OfferType = {
   id: number;
@@ -48,13 +48,13 @@ const containerVariants = {
 
 const cardVariants = {
   hidden: { opacity: 0, scale: 0.9, y: 30 },
-  visible: { opacity: 1, scale: 1, y: 0, transition: { duration: 0.6, ease: 'easeOut' } },
+  visible: { opacity: 1, scale: 1, y: 0, transition: { duration: 0.6, ease: 'easeOut' as const } },
 };
 
 const Offer: FC = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.3 });
-  const [shouldLoad, setShouldLoad] = useState(false)
+  // const [shouldLoad, setShouldLoad] = useState(false)
 
 
   return (
@@ -65,7 +65,7 @@ const Offer: FC = () => {
           className={styles.title}
           initial={{ opacity: 0, y: -30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.7, ease: 'easeOut' }}
+          transition={{ duration: 0.7, ease: 'easeOut' as const }}
         >
           What We <span>Can Offer You</span>
         </motion.h3>

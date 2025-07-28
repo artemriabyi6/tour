@@ -1,7 +1,14 @@
 import styles from './adventures.module.scss'
 
+interface AdventureCardProps {
+    title: string,
+    description: string,
+    price: string,
+    img: string
+}
 
-const AdventureCard = ({ title, description, price, img}) => {
+
+const AdventureCard = ({ title, description, price, img}: AdventureCardProps) => {
     return ( 
         
          <div className={styles.adventureCard}>
