@@ -1,0 +1,50 @@
+.section {
+    background-color: #007073;
+    padding: 100px 0px;
+      @media (max-width:1000px) {
+            padding: 80px 0px;
+        }
+        @media (max-width:767px) {
+            padding: 60px 0px;
+        }
+         @media (max-width:500px) {
+            padding: 30px 0px;
+        }
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        @media (max-width:1000px) {
+            flex-direction: column;
+            align-items: center;
+        }
+        .infoBlock {
+            h2 {
+                font-size: 60px;
+                color: white;
+                font-weight: 100;
+                line-height: 1.1;
+                margin-bottom: 50px;
+                @media (max-width:1000px) {
+                text-align: center;
+        }
+                span {
+                    font-size: 60px;
+                    font-weight: 900;
+                }
+            }
+            .text {
+                color: white;
+                max-width: 300px;
+                font-size: 20px;
+                font-weight: 400;
+                @media (max-width:1000px) {
+                text-align: center;
+                margin-bottom: 100px;
+        }
+            }
+        }
+        
+    }
+}

@@ -1,0 +1,106 @@
+.section {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  .video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+  .container {
+    max-width: 1200px;
+    margin: auto;
+    height: 100vh;
+    padding: 100px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+     @media (max-width: 700px) {
+       justify-content: inherit;
+       padding: 50px;
+       
+      }
+
+    h1 {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        color: rgb(255, 255, 255);
+        margin-bottom: 30px;
+        @media (max-width: 700px) {
+      margin-bottom: 150px;
+       
+      }
+    }
+    .pin {
+        width: 30px;
+        height: 30px;
+        filter: invert(1);
+    }
+    .descBlock {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      .text {
+        font-size: 70px;
+        color: rgb(255, 255, 255);
+        line-height: 1.1;
+        span {
+          // font-size: 70px;
+          font-weight: 900;
+        color: white;
+
+        }
+          @media (max-width: 1000px) {
+        font-size: 50px;
+        margin-bottom: 30px;
+      }
+      @media (max-width: 700px) {
+        font-size: 30px;
+        line-height: 1.01;
+        margin-bottom: 150px;
+        text-align: center;
+      }
+      }
+
+      button {
+        align-self: end;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        cursor: pointer;
+        padding: 15px 40px;
+        background-color: #0dbdad;
+        font-size: 20px;
+        color: white;
+        border-radius: 20px;
+        text-transform: uppercase;
+        svg {
+          transition: transform 0.3s ease;
+        }
+
+        &:hover svg {
+          transform: translateX(10px);
+        }
+
+        @media (max-width: 1000px) {
+        align-self: inherit;
+      }
+      }
+
+      @media (max-width: 1000px) {
+       
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+}

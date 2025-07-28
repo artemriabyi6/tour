@@ -1,0 +1,85 @@
+.sliderWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+}
+
+.sliderContainer {
+  position: relative;
+  width: 800px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ @media (max-width:1000px) {
+            width: 80%;
+        }
+        @media (max-width:800px) {
+            width: 300px;
+        }
+}
+
+.active {
+  width: 600px;
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  position: relative;
+  z-index: 1;
+  transition: transform 0.6s ease, opacity 0.6s ease;
+  @media (max-width:1000px) {
+            width: 400px;
+        }
+        @media (max-width:800px) {
+            width: 90%;
+        }
+}
+
+.inactiveContainer {
+  display: flex;
+  position: absolute;
+  gap: 20px;
+  top: 32%;
+  right: -5%;
+  z-index: 2;
+  pointer-events: auto;
+  @media (max-width:1000px) {
+            top: -12%;
+  right: 19%;
+  flex-direction: column;
+        }
+}
+
+.inactive {
+  width: 200px;
+  height: 150px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  cursor: pointer;
+  opacity: 0.8;
+  @media (max-width:1000px) {
+            width: 200px;
+            height: 100px;
+        }
+
+  &:hover {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 24px;
+  color: #fff;
+  width: 100%;
+  border-radius: 0 0 20px 20px;
+  transition: opacity 0.4s ease;
+}
