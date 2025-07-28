@@ -36,9 +36,9 @@ const Tours = () => {
             <span>it to us!</span>
           </h2>
           <p className={styles.text}>
-            Write a paragraph that talks about your company here. You can talk
+            {`Write a paragraph that talks about your company here. You can talk
             about your company's background, history, mission, vision, or
-            philosophy.
+            philosophy.`}
           </p>
         </div>
 
